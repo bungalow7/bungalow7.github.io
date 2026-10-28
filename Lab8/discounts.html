@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to the product discount app!!</h1>
+    <label for="">Please enter the price of the product: $</label>
+    <input type="text" id="price" />
+    <br /><br />
+    <label for="">Please enter the discount percentage: </label>
+    <input type="text" id="discount" /><label for="">% off</label>
+    <h2 id="output"></h2>
+    <input
+      type="submit"
+      value="Calculate Discount"
+      onclick="
+        price = document.getElementById('price').value;
+        discount = document.getElementById('discount').value;
+        discounted_price = price * (1 - discount / 100);
+        document.getElementById('output').innerHTML =
+          `Discounted price is $${discounted_price}`;
+      "
+    />
+  </body>
+</html>
